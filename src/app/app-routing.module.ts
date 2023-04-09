@@ -1,24 +1,28 @@
-import { PeliculasComponent } from './routes/components/peliculas/peliculas.component';
+import { IngresarComponent } from './routes/ingresar/ingresar.component';
+import { InicioComponent } from './routes/inicio/inicio.component';
+import { PelisComponent } from './routes/pelis/pelis.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './routes/components/inicio/inicio.component';
-import { SeriesComponent } from './routes/components/series/series.component';
-import { IngresarComponent } from './routes/components/ingresar/ingresar.component';
+import { SeriesComponent } from './routes/series/series.component';
 
 const routes: Routes = [
 {
   path:'inicio',
-  component: InicioComponent,
+  component: InicioComponent ,
 },
 {
-  path:'peliculas',
-  component: PeliculasComponent,
+  path:'pelis',
+  component: PelisComponent,
 },
-{
-  path:'**',
-  redirectTo:'inicio',
-}
 
+{
+  path:'ingresar',
+  component: IngresarComponent,
+},
+{
+  path:'series',
+  component: SeriesComponent,
+},
 ];
 
 @NgModule({

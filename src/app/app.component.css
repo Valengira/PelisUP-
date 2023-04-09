@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header{
   background: rgba(48, 58, 91, 0.8);
   font-family: 'Open Sans', sans-serif;
@@ -12,8 +13,12 @@ header{
   width: 90%;
   margin: auto;
 }
+.container .header{
+  width: 90%;
+  margin: auto;
+}
 
-header .container{
+header .container .header{
   display: flex;
   justify-content: space-between;
   align-items: center;

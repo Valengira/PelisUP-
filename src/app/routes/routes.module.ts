@@ -1,30 +1,28 @@
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { SeriesComponent } from './components/series/series.component';
-import { PeliculasComponent } from './components/peliculas/peliculas.component';
-import { IngresarComponent } from './components/ingresar/ingresar.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { PelisComponent } from './pelis/pelis.component';
+import { SeriesComponent } from './series/series.component';
+import { IngresarComponent } from './ingresar/ingresar.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
 @NgModule({
   declarations: [
     InicioComponent,
+    PelisComponent,
     SeriesComponent,
-    PeliculasComponent,
     IngresarComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
+    AppRoutingModule,
   ],
-  exports:[
+  exports: [
     InicioComponent,
-    PeliculasComponent,
-    SeriesComponent,
-    IngresarComponent,
-  ],
-
+  ]
 })
 export class RoutesModule { }
