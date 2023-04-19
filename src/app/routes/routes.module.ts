@@ -6,6 +6,7 @@ import { PelisComponent } from './pelis/pelis.component';
 import { SeriesComponent } from './series/series.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +21,7 @@ import { AppRoutingModule } from '../app-routing.module';
     CommonModule,
     SharedModule,
     AppRoutingModule,
+    FormsModule,
   ],
   exports: [
     InicioComponent,
