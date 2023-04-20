@@ -6,7 +6,7 @@ import { PelisComponent } from './pelis/pelis.component';
 import { SeriesComponent } from './series/series.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { AppRoutingModule } from '../app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,9 +22,13 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     InicioComponent,
+    PelisComponent,
+    SeriesComponent,
+    IngresarComponent,
   ]
 })
 export class RoutesModule { }

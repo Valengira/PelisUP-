@@ -1,5 +1,37 @@
-<p>ingresar works!</p>
-<div class="card">
-  <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" >
-<input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example">
+<div class="card login nx-auto">
+  <div class="container">
+    <form (ngSubmit)="ingresar()" [formGroup]="loginForm">
+      <div  class="box"><img src="./assets/imagen.png" alt=""  width="300" height="330"></div>
+      <h2>ingresar</h2>
+      <input
+         type="email"
+         name="email"
+         id="email"
+         placeholder="Correo"
+         formControlName="correo">
+
+         <span class="form-text text-danger" *ngIf="campoEsValido('correo')">
+           Campo obligatorio
+        </span>
+
+    <input
+     type="password"
+     name="contraseña"
+     id="contraseña"
+     placeholder="Contraseña"
+     formControlName="contraseña">
+     <span class="form-text text-danger" *ngIf="campoEsValido('contraseña')">
+      Campo obligatorio
+   </span>
+<br>
+	  <input type="submit" name="enviar" value="Ingresar"/>
+  <hr>
+  <input type="submit" name="enviar" (click)=" ingresarConGoogle()" value="Ingresar con Google"/>
+  <hr>
+  <input type="submit" name="enviar"  (click)="register()" value="Registrar"/>
+    </form>
+  </div>
+
 </div>
+
+
