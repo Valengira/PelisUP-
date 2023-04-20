@@ -1,9 +1,9 @@
-import { IngresarComponent } from './routes/ingresar/ingresar.component';
 import { InicioComponent } from './routes/inicio/inicio.component';
 import { PelisComponent } from './routes/pelis/pelis.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SeriesComponent } from './routes/series/series.component';
+import { IngresarComponent } from './routes/ingresar/ingresar.component';
 
 const routes: Routes = [
 {
@@ -18,6 +18,7 @@ const routes: Routes = [
 {
   path:'ingresar',
   component: IngresarComponent,
+
 },
 {
   path:'series',
