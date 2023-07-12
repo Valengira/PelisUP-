@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav .pelis{
+  background: rgba(64, 98, 209, 0.8);
+  width: 100%;
+  margin: auto;
+  padding: 10px 0;
+  text-align: center;
+  font-size: x-large;
+  border: 4px solid #121010;
+  font-size: 30px;
+}
+
+header{
+  background: rgba(48, 58, 91, 0.8);
+  font-family: 'Open Sans', sans-serif;
+  padding: 30px 0;
+}
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo{
+  font-size: 40px;
+}
+header nav a{
+  color: #aaa;
+  text-decoration: none;
+  margin-right: 20px;
+}
+header nav a:hover{
+  color: #fff;
+}
+section{
+  background-color: rgba(18, 24, 41, 0.9);
+}
+section h1{
+  font-family: 'poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 80px;
+  color: #ebeef5;
+}
+section h2,h3{
+  color: #aaa;
+  padding: 8px 0;
+  font-size: medium;
+}
+section input{
+  width: 344px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 17px, 16px;
+  gap: 16px;
+  background: rgba(18, 24, 41, 0.8);
+  border: 1px,solid, #323B54;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+section button{
+  color: aliceblue;
+  border: none;
+  border-radius: 0.31rem;
+  padding: 0.03;
+  height: 36px;
+  width: 176px;
+  background-color: #121010;
+
+}
+section button:hover{
+  background-color: rgb(164, 80, 243);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px blue;
+
+}
+.card{
+  background-color: #323B54;
+  border: 1px solid #121010;
+  border-radius:0.45rem ;
+
+}
+.contenido{
+  font-family: 'poppins';
+  font-style: normal;
+  font-weight: 620;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+}
+.wrapperCards .container{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}

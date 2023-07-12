@@ -23,6 +23,9 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   exports: [
     InicioComponent,
+    PelisComponent,
+    SeriesComponent,
+    IngresarComponent,
   ]
 })
 export class RoutesModule { }
