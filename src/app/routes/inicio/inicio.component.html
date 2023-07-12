@@ -6,9 +6,26 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="seach" placeholder="Buscar">
       </form>
-      <button type="button" class="btn btn-lg botonTab">Todos</button>
-      <button type="button" class="btn btn-lg botonTab">Películas</button>
-      <button type="button" class="btn btn-lg botonTab">Series</button>
+      <button type="button" class="btn btn-lg botonTab" (click)="cambiarCategoria('Todos')" [ngClass]="selected =='Todos'? 'button-Selected': 'button-NoSelected'" >Todos</button>
+      <button type="button" class="btn btn-lg botonTab" (click)="cambiarCategoria('pelis')" [ngClass]="selected =='pelis'? 'button-Selected': 'button-NoSelected'">Películas</button>
+      <button type="button" class="btn btn-lg botonTab" (click)="cambiarCategoria('series')" [ngClass]="selected =='series'? 'button-Selected': 'button-NoSelected'">Series</button>
+    </div>
+  </div>
+</section>
+
+<section class="wrapperCards">
+  <div class="container">
+    <div  class="row"*ngfor="let movie of movies_series">
+      <div class="col-4">
+        <div class="card" *ngIf="selected == movie.media_type || selected =='Todos'" >
+          <figure>
+            <img src={{movie.image}} alt="">
+          </figure>
+          <div class="contenido">
+            <h3>{{movie.name}}</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

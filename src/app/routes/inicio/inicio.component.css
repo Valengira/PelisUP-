@@ -1,19 +1,7 @@
-.container{
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-button{
-  color: aliceblue;
-  border: none;
-  border-radius: 0.31rem;
-  padding: 0.03;
-  height: 36px;
-  width: 176px;
-  background-color: #121010;
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
  button:hover{
   background-color: rgb(164, 80, 243);
@@ -21,20 +9,7 @@ button{
   box-shadow: 0 4px 17px blue;
 
 }
-input{
-  width: 344px;
-  height: 34px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 17px, 16px;
-  gap: 16px;
-  background: rgba(18, 24, 41, 0.8);
-  border: 1px,solid, #323B54;
-  border-radius: 12px;
-  text-align: center;
-  color: #fff;
-}
+
 section h1{
   font-family: 'poppins';
   font-style: normal;
@@ -49,4 +24,65 @@ section h2,h3{
 }
 section{
   background-color: rgba(18, 24, 41, 0.9);
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+section input{
+  width: 344px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 17px, 16px;
+  gap: 16px;
+  background: rgba(18, 24, 41, 0.8);
+  border: 1px,solid, #323B54;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+section button{
+  color: rgb(1, 6, 10);
+  border: none;
+  border-radius: 32px;
+  padding: 0.03;
+  height: 36px;
+  width: 176px;
+}
+.button-Selected{
+  background-color: aquamarine;
+}
+.button-NoSelected{
+  background-color: violets;
+}
+section button:hover{
+  background-color: rgb(164, 80, 243);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px blue;
+
+}
+.card{
+  background-color: #323B54;
+  border: 1px solid #121010;
+  border-radius:0.45rem ;
+
+}
+.contenido{
+  font-family: 'poppins';
+  font-style: normal;
+  font-weight: 620px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+.wrapperCards .container{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
