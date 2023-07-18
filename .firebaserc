@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "desafio6-39e95"
+  },
+  "targets": {
+    "desafio6-39e95": {
+      "hosting": {
+        "proyecto": [
+          "desafio6-39e95"
+        ]
+      }
+    }
+  }
+}

@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "proyecto:build:production",
+            "firebaseProject": "desafio6-39e95",
+            "firebaseHostingSite": "desafio6-39e95"
+          }
         }
       }
     }

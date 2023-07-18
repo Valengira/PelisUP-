@@ -5,11 +5,10 @@ import { SharedModule } from './shared/shared.module';
 import { RoutesModule } from './routes/routes.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from './layout/layout.module';
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { AppComponent } from './app.component';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { AngularFireAuthModule} from '@angular/fire/compat/auth'
+import { AngularFireModule } from '@angular/fire/compat';
 import {FIREBASE_OPTIONS} from '@angular/fire/compat';
+import { environment } from 'src/environments/environment.development';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDxppUxIAEco9Cg3NM1mVfhw6Yv1hV7_Zg",
@@ -32,9 +31,7 @@ const firebaseConfig = {
     SharedModule,
     LayoutModule,
     HttpClientModule,
-    AngularFireAuthModule,
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideFirestore(() => getFirestore()),
+    AngularFireModule.initializeApp(environment.firebase),
     ],
   providers: [
     {provide: FIREBASE_OPTIONS, useValue: firebaseConfig}
