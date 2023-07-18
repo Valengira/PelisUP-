@@ -1,52 +1,18 @@
-
-
-<nav class="navbar navbar-light bg-light ">
-  <div class="pelis">
-      <span class="navbar-text">
-          PELICULAS
-        </span>
-  </div>
-</nav>
-
-
-<section class="wrapperCards">
-  <div class="container">
-    <div class="card">
-      <figure>
-        <img src="./assets/1-black-widow.svg" alt="">
-      </figure>
-      <div class="contenido">
-        <h3>BLACK WIDOW</h3>
-      </div>
-    </div>
-    <div class="card">
-      <figure>
-        <img src="./assets/2-shang-chi.svg" alt="">
-      </figure>
-      <div class="contenido">
-        <h3>SHANG CHI</h3>
-      </div>
-    </div>
-    <div class="card">
-      <figure>
-        <img src="./assets/3-loki.svg" alt="">
-      </figure>
-      <div class="contenido">
-        <h3>LOKI</h3>
-      </div>
-    </div>
-    <div class="card">
-      <figure>
-        <img src="./assets/4-mother.svg" alt="">
-      </figure>
-      <div class="contenido">
-        <h3>HOW I MET YOUR MOTHER</h3>
-      </div>
-    </div>
-
-    <p></p>
-  </div>
-
-
+<section class="my-5 mx-5">
+  <h1>Películas</h1>
 </section>
-
+<section class="my-3 mx-5">
+  <div class="mb-2 input-group">
+      <span class="input-group-text" id="inputGroupPrepend">
+          <i class="bi bi-search"></i>
+      </span>
+      <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="Buscar películas y series">
+  </div>
+</section>
+<section class="my-5 mx-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-3 m-2" *ngFor="let item of movies">
+            <app-movie-card (AddMovie)="addMovieToFirebase($event)" (DeleteMovie)="deleteMovieFromFirebase($event)" [id]="item.id" [title]="item.title || item.name" [img]="'https://www.themoviedb.org/t/p/w220_and_h330_face' + item.poster_path"></app-movie-card>      </div>
+  </div>
+</section>

@@ -1,5 +1,5 @@
 import { Trending } from 'src/app/shared/interfce/Trending.interface';
-import { MoviesService } from './../../services/movies.service';
+import { MoviesService } from '../../services/movie-db.service';
 import { Component } from '@angular/core';
 @Component({
   selector: 'app-inicio',

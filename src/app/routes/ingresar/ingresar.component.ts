@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { initializeApp } from '@angular/fire/app';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -16,7 +17,9 @@ export class IngresarComponent {
   })
   constructor(
     private formBuilder: FormBuilder,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private  router: Router
+
   ){}
   async ingresar(){
     if (this.loginForm.invalid){
@@ -47,6 +50,7 @@ export class IngresarComponent {
     }
     async ingresarConGoogle(){
       const info = await this._authService.loginWithGoogle(this.loginForm.controls['correo'].value, this.loginForm.controls['contraseña'].value);
+      this.router.navigate(['/deshboard'])
     }
 }
 

@@ -1,0 +1,29 @@
+.custom-bg {
+  padding: 10px 10px;
+  background: rgb(34,93,195);
+  background: linear-gradient(142deg, rgba(34,93,195,1) 0%, rgba(38,42,52,1) 100%);
+  color: white;
+  font-size: 40px;
+  text-align: center;
+   width: 98%;
+  border: 7px solid #2ad0d0;
+  border-radius:0.45rem ;
+}
+
+.custom-contador {
+  color: rgb(221, 225, 233);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  cursor: pointer;
+  font-family: 'poppins';
+  font-style: normal;
+  font-size: 38px;
+}
+
+.custom-contador h4 {
+  font-size: 50px;
+}
+
+.custom-contador p {
+  font-size: 40px;
+}

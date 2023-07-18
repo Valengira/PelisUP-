@@ -7,15 +7,16 @@ import { SeriesComponent } from './series/series.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DeshboardComponent } from './components/deshboard/deshboard.component';
 
 
 
 @NgModule({
   declarations: [
-    InicioComponent,
     PelisComponent,
     SeriesComponent,
     IngresarComponent,
+    DeshboardComponent,
   ],
   imports: [
     CommonModule,

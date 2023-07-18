@@ -1,4 +1,4 @@
-import { provideFirestore } from '@angular/fire/firestore';
+import { FirestoreModule, provideFirestore } from '@angular/fire/firestore';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,20 +27,18 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RoutesModule,
     SharedModule,
     LayoutModule,
     HttpClientModule,
+    FirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(()=> getFirestore()),
     AngularFireAuthModule,
-
     ],
   providers: [
     {provide: FIREBASE_OPTIONS, useValue: firebaseConfig}
