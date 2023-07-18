@@ -7,35 +7,36 @@ import firebase from 'firebase/compat/app';
 })
 export class AuthService {
 
-  constructor(private afauth: AngularFireAuth) { }
+  constructor(
+    private afauth: AngularFireAuth)
+     { }
 
   async login (email: string, contraseña: string){
     try{
       return await this.afauth.signInWithEmailAndPassword(email, contraseña);
     }
-    catch(err){
-     console.log('Error en login', err);
+  catch(error: any){
+    console.log('Error en login', error);
      return null;
     }
   }
 
-  async loginWithGoogle (){
+  async loginWithGoogle (email: string, contraseña: string){
     try{
       return await this.afauth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
     }
-    catch(err){
-      console.log('Error en login con google ', err);
+    catch(error){
+      console.log('Error en login con google ', error);
       return null;
     }
-
   }
 
   async register (email: string, contraseña: string){
      try {
-      return this.afauth.createUserWithEmailAndPassword(email, contraseña);
+      return await this.afauth.createUserWithEmailAndPassword(email, contraseña);
      }
-     catch(err){
-      console.log('Error en registro ', err);
+     catch(error){
+      console.log('Error en registro ', error);
       return null;
     }}
 }
